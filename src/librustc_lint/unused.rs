@@ -330,7 +330,7 @@ impl<'a, 'tcx> LateLintPass<'a, 'tcx> for UnusedAttributes {
 
 declare_lint! {
     pub(super) UNUSED_PARENS,
-    Warn,
+    Allow,
     "`if`, `match`, `while` and `return` do not need parentheses"
 }
 
