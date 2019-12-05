@@ -1,3 +1,20 @@
+# The Fork of Rust Programming Language
+ * Allow "unused parentheses" by default
+ ```
+    diff --git a/src/librustc_lint/unused.rs b/src/librustc_lint/unused.rs
+    index f7de7ec7e18..48c042c97da 100644
+    --- a/src/librustc_lint/unused.rs
+    +++ b/src/librustc_lint/unused.rs
+    @@ -330,7 +330,7 @@ impl<'a, 'tcx> LateLintPass<'a, 'tcx> for UnusedAttributes {
+     
+     declare_lint! {
+         pub(super) UNUSED_PARENS,
+    -    Warn,
+    +    Allow,
+         "`if`, `match`, `while` and `return` do not need parentheses"
+     }
+ ```
+
 # The Rust Programming Language
 
 This is the main source code repository for [Rust]. It contains the compiler,
